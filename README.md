@@ -61,6 +61,15 @@ agent.md、全局工作台.md、复利与踩坑.md、新项目流程.md、工程
 确认理解后，按「新项目流程」执行，向我的汇报遵循 STE 规范。
 ```
 
+## 🧩 作为 Skill 使用
+
+本框架也提供 **skill 版**（[`skill/siwfa/`](skill/siwfa/)），可直接安装到支持 Skill 机制的 SI 助手（Claude Code、Codex、Hermes 等）——助手会在「建立工作系统／初始化工作区」类请求时自动触发：
+
+- `SKILL.md`：框架入口（核心契约速览 + 工作区初始化指引）
+- `references/`：六份核心文档原文（运行时模板，与 `workspace/` 保持同步）
+
+**安装**：把 `skill/siwfa/` 整个目录复制进你的助手技能目录即可（如 `~/.hermes/skills/<分类>/siwfa/`）。
+
 ## 📚 六份核心文档
 
 | 文档 | 职责 |
