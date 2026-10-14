@@ -25,6 +25,11 @@
 
 ## 🏗️ 框架长什么样
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/siwa-structure-dark.png">
+  <img alt="SIWFA 结构规范图：用户 → SI 助手 → 项目工作区；Workspace/ 规则中枢含六份核心文档；收尾经验回写" src="assets/siwa-structure-light.png">
+</picture>
+
 ```
 <WORKSPACE_ROOT>/　　　　← 你自选的工作区根目录（如 ~/work）
 ├── Workspace/　　　　   ← 规则中枢（六份核心文档，不存项目产出）
