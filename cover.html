@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <style>
   :root{
-    --bg:#0A0B0D; --ink:#F5F6F7; --muted:#8E959C;
+    --bg:#0A0B0D; --ink:#F5F6F7; --muted:#969DA4;
     --green:#C9FF3D; --line:#17191D;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -23,28 +23,28 @@
     background-size:64px 64px;
   }
   body::after{
-    content:"";position:absolute;width:560px;height:560px;left:-190px;top:-230px;
-    background:radial-gradient(circle, rgba(201,255,61,.16) 0%, rgba(201,255,61,0) 62%);
+    content:"";position:absolute;width:660px;height:660px;left:-230px;top:-270px;
+    background:radial-gradient(circle, rgba(201,255,61,.26) 0%, rgba(201,255,61,0) 64%);
   }
   .frame{position:absolute;inset:0;padding:52px 64px 44px;display:flex;flex-direction:column;justify-content:space-between}
 
   header{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
   .brand{display:flex;align-items:center;gap:12px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:19px;letter-spacing:.14em;color:var(--ink)}
   .dot{width:11px;height:11px;background:var(--green);border-radius:2px;display:inline-block}
-  .sub{font-size:19px;color:var(--muted);letter-spacing:.06em}
+  .sub{font-size:19px;color:var(--muted);letter-spacing:.06em;margin-right:-.06em}
 
   main{display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:2}
-  h1{font-size:92px;line-height:1.14;font-weight:700;letter-spacing:.01em}
+  h1{font-size:92px;line-height:1.14;font-weight:700;letter-spacing:.01em;margin-left:-3px}
   .hl{color:var(--green)}
-  .lede{margin-top:26px;font-size:23px;line-height:1.6;color:var(--muted);font-weight:400}
+  .lede{margin-top:26px;font-size:26px;line-height:1.6;color:var(--muted);font-weight:400}
 
-  ol.docs{list-style:none;text-align:right;padding-bottom:8px}
-  ol.docs li{font-size:21px;line-height:1.9;color:#D6DADE;white-space:nowrap}
-  ol.docs i{font-style:normal;font-family:ui-monospace,'SF Mono',Menlo,monospace;color:var(--green);font-size:17px;margin-right:14px;letter-spacing:.05em}
+  ol.docs{list-style:none;text-align:right;padding-bottom:0;margin-bottom:-6px}
+  ol.docs li{font-size:24px;line-height:2.1;color:#E9ECEF;white-space:nowrap}
+  ol.docs i{font-style:normal;font-family:ui-monospace,'SF Mono',Menlo,monospace;color:var(--green);font-size:18px;margin-right:14px;letter-spacing:.05em}
 
   footer{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
   .url{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:19px;color:var(--ink);letter-spacing:.02em}
-  .slogan{font-size:18px;color:var(--green);letter-spacing:.22em;font-family:ui-monospace,'SF Mono',Menlo,monospace}
+  .slogan{font-size:18px;color:var(--green);letter-spacing:.22em;font-family:ui-monospace,'SF Mono',Menlo,monospace;margin-right:-.22em}
 </style>
 </head>
 <body>
@@ -62,7 +62,7 @@
         <li><i>01</i>全局工作台</li>
         <li><i>02</i>复利与踩坑</li>
         <li><i>03</i>新项目流程</li>
-        <li><i>04</i>agent 指令</li>
+        <li><i>04</i>Agent 指令</li>
         <li><i>05</i>工程的原则</li>
         <li><i>06</i>方法论日志</li>
       </ol>
