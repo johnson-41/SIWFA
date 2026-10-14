@@ -1,6 +1,6 @@
-# SIWFA 工作区行为规范
+# SIWFA
 
-> 这是可移植的 Agent 工作框架，适用于任何 SI 助手（Claude、Codex、GPT、Gemini 等）。
+> SIWFA 工作区行为规范，这是可移植的 Agent 工作框架，适用于任何 SI 助手（Claude、Codex、GPT、Gemini 等）。
 > 把 Hermes 专属路径与账号全部换成占位符，其余规则与成型版完全一致。
 >
 > **位置变量 `<WORKSPACE_ROOT>`**：你自选的工作区根目录，例如 `~/work` 或 `D:\work`。
