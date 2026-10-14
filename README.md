@@ -1,4 +1,4 @@
-# SI Workspace Framework（Agent 工作区框架规范）
+# SIWFA（SI Workspace Framework Agent 工作区框架规范）
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Works with](https://img.shields.io/badge/Works%20with-Claude%20%C2%B7%20Codex%20%C2%B7%20GPT%20%C2%B7%20Gemini-blue)
@@ -25,19 +25,19 @@
 ## 🏗️ 框架长什么样
 
 ```
-<WORKSPACE_ROOT>/        ← 你自选的工作区根目录（如 ~/work）
-├── Workspace/           ← 规则中枢（六份核心文档，不存项目产出）
-│   ├── 全局工作台.md    ← 总体规则、行为铁律、命名规范
-│   ├── 复利与踩坑.md    ← 经验资产库，只增不删
-│   ├── 新项目流程.md    ← 项目执行 SOP，三档模式
-│   ├── agent.md         ← Agent 最高优先级指令
-│   ├── 工程的原则.md    ← 代码/工程任务执行基线
-│   └── 方法论日志.md    ← 规则版本演变，可回退
+<WORKSPACE_ROOT>/　　　　← 你自选的工作区根目录（如 ~/work）
+├── Workspace/　　　　   ← 规则中枢（六份核心文档，不存项目产出）
+│   ├── agent.md　　　　 ← Agent 最高优先级指令
+│   ├── 全局工作台.md　　 ← 总体规则、行为铁律、命名规范
+│   ├── 复利与踩坑.md　　 ← 经验资产库，只增不删
+│   ├── 新项目流程.md　　 ← 项目执行 SOP，三档模式
+│   ├── 工程的原则.md　　 ← 代码/工程任务执行基线
+│   └── 方法论日志.md　　 ← 规则版本演变，可回退
 │
-├── Project-001-名称/    ← 具体项目（编号自增）
-│   ├── 背景情况.md      ← 必填，项目启动前由用户提供
+├── Project-001-名称/　　← 具体项目（编号自增）
+│   ├── 背景情况.md　　　 ← 必填，项目启动前由用户提供
 │   ├── Token成本核算.md ← 项目收尾统计
-│   └── ...              ← 该项目全部产出
+│   └── ...　　　　　　　 ← 该项目全部产出
 └── Project-002-名称/
 ```
 
@@ -51,7 +51,7 @@
 
 ```
 你是我的工作助手。启动任何任务前，先读取 <WORKSPACE_ROOT>/Workspace/ 下的六份核心文档：
-全局工作台.md、复利与踩坑.md、新项目流程.md、agent.md、工程的原则.md、方法论日志.md。
+agent.md、全局工作台.md、复利与踩坑.md、新项目流程.md、工程的原则.md、方法论日志.md。
 确认理解后，按「新项目流程」执行，向我的汇报遵循 STE 规范。
 ```
 
@@ -59,10 +59,10 @@
 
 | 文档 | 职责 |
 |------|------|
+| [`agent.md`](workspace/agent.md) | Agent 最高优先级指令：解析流、第一动作、汇报规范 |
 | [`全局工作台.md`](workspace/全局工作台.md) | 总体规则、目录规范、行为铁律（11 条）、命名规范、执行原则 |
 | [`复利与踩坑.md`](workspace/复利与踩坑.md) | 记录错误、教训、可复用方法，避免重复踩坑 |
 | [`新项目流程.md`](workspace/新项目流程.md) | 标准化项目启动流程，从需求到交付（8 步） |
-| [`agent.md`](workspace/agent.md) | Agent 最高优先级指令：解析流、第一动作、汇报规范 |
 | [`工程的原则.md`](workspace/工程的原则.md) | 代码/工程任务执行基线（5 条原则） |
 | [`方法论日志.md`](workspace/方法论日志.md) | 方法论的版本演变记录 |
 
@@ -72,14 +72,14 @@
 
 | 模式 | 定义 | 适用场景 |
 |------|------|----------|
-| 简单模式 | 仅背景 + 直接执行呈现结果 | 需求明确的小任务：改个文件、写段文案、查个信息，问清背景后直接出结果 |
+| 简单模式 | 背景 + 直接执行呈现结果 | 需求明确的小任务：改个文件、写段文案、查个信息，问清背景后直接出结果 |
 | 阶梯模式（默认） | 背景 + 各环节可跳跃 | 中等复杂度的项目：框架提问、盲点扫描、方案推演各环节可由用户决定跳过，节奏灵活 |
 | 思考模式 | 背景 + 流程完整执行 | 战略级或需求模糊的项目：完整走完提问、盲点推演、方案制定，再动手执行 |
 
 ## ✨ 特色机制
 
-- **STE 汇报规范**：源自 [ste-zh](https://github.com/dualface/ste-zh)（ASD-STE100 简化技术中文，MIT），汇报关键信息先行、状态词固定、如实写验证，不叙述过程。
-- **盲点三维扫描**：关键节点用 [blindspot-audit](https://github.com/MJL-ren/blindspot-audit) 扫盲区，给出三种解决思路。
+- **STE 汇报规范**：源自 ste-zh 规范（ASD-STE100 简化技术中文，MIT），汇报关键信息先行、状态词固定、如实写验证，不叙述过程。
+- **盲点三维扫描**：关键节点用 blindspot-audit 扫盲区，给出三种解决思路。
 - **技能策展**：项目启动前检索本地技能库 → 对比外部平台 → 择优汰旧。
 - **Token 成本核算**：项目收尾记录预估与实际消耗，成本可见。
 - **交付后修订窗口**：交付后 48 小时内免费修订一轮，边界清晰。
@@ -101,8 +101,8 @@
 
 ## 🙏 致谢
 
-- [ste-zh](https://github.com/dualface/ste-zh)（dualface，ASD-STE100 简化技术中文，MIT 许可）— 汇报规范来源
-- [blindspot-audit](https://github.com/MJL-ren/blindspot-audit) — 盲点扫描方法来源
+- 感谢 dualface 开发的 [ste-zh](https://github.com/dualface/ste-zh)（ASD-STE100 简化技术中文，MIT 许可）——本框架的 STE 汇报规范来源。
+- 感谢 MJL-ren 开发的 [blindspot-audit](https://github.com/MJL-ren/blindspot-audit)——本框架的盲点扫描方法来源。
 
 ## 📄 License
 
